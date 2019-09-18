@@ -10,7 +10,7 @@
 
 - Install Library
 
-```python - m pip install -r requirements.txt```
+```python -m pip install -r requirements.txt```
 
 *Note that* Windows use **python**, MacOSX and Linux use **python3**
 
