@@ -16,7 +16,7 @@
 
 ## Usage
 
-1. In MakeCode, the basic code for bluetooth communication is illustrated as
+1. In MakeCode, add the Bluetooth extension. The basic code for bluetooth communication is illustrated as
 
     ![alt text](/images/uart_BLE.png)
 
