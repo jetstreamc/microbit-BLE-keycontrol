@@ -1,49 +1,48 @@
 # microbit-BLE-keycontrol
 
+**Note that** This is only tested in Windows
+
 ## Installation
 
-- Install Python3 and Add to Path (See [https://python.org/](https://python.org/))
-- Download code from this repository
-- Open Terminal / CMD / Power Shell
+- Install Python3 and check Add to Path (See [https://python.org/](https://python.org/))
+- Download code from this repository and extract the code to your directory
+- Open CMD / Power Shell
 
-```cd <project-directory>```
+    ```cd <your-directory>```
 
 - Install Library
 
-```python -m pip install -r requirements.txt```
-
-*Note that* Windows use **python**, MacOSX and Linux use **python3**
+    ```python -m pip install -r requirements.txt```
 
 ## Usage
 
-- Pair your computer to the micro:bit using Bluetooth (See [Youtube](https://www.youtube.com/watch?v=7hLBfdAGkZI))
+1. In MakeCode, the basic code for bluetooth communication is illustrated as
 
-### Discover Bluetooth Device
+    ![alt text](/images/uart_BLE.png)
 
-- To discover the nearby bluetooth device, run
+2. Upload code from MakeCode to micro:bit device
 
-```python discover.py```
+3. Turn on pairing mode on micro:bit
 
-- The output will show the paired micro:bit.
-- Copy the MAC address of the micro:bit device.
-- Edit code *run_dpad_MES.py* and *run_uart_BLE.py*, replace the MAC address to the copied value.
+   - press and hold button *A* and *B*
+   - press and release button *reset*
+   - release button *reset*
+  
+4. Use python script to find the physical address of the micro:bit
 
-### Use BLE UART Service
+   - ```python discover.py```
 
-- Connect the micro:bit block and upload
+   - It's address will be available in the format of AA:AA:AA:AA:AA
 
-![alt text](/images/uart_BLE.png)
+5. Replace the address value in the file *run_uart_BLE.py* by the address from the previous step.
 
-- To use the BLE UART, run
+6. Pair your computer to the micro:bit in Windows Bluetooth Setting
 
-```python run_uart_BLE.py```
+7. Your micro:bit is now set to pair to your computer
 
-### Use DPAD MES Event
+8. Remove the micro:bit device from the Windows Bluetooth Setting (because we don't want Windows to take over the micro:bit device)
 
-- Connect the micro:bit block and upload
+9. Run the python script to control the micro:bit
 
-![alt text](/images/dpad_MES.png)
-
-- To use the BLE UART, run
-
-```python run_dpad_MES.py```
+   - ```python run_uart_BLE.py```
+  
