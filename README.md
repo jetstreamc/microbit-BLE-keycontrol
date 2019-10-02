@@ -26,7 +26,7 @@
 
    - press and hold button *A* and *B*
    - press and release button *reset*
-   - release button *reset*
+   - wait until the Bluetooth icon appear, release button *A* and *B*
   
 4. Use python script to find the physical address of the micro:bit
 
